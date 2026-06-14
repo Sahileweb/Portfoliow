@@ -295,10 +295,7 @@ nav {
 }
 .hero-initials-hint { font-size:.65rem; color:var(--light-muted); letter-spacing:2px; text-transform:uppercase; }
 
-
-/* ══════════════════════════════════════════
-   ABOUT  —  white background
-══════════════════════════════════════════ */
+/*about*/
 #about {
   background: var(--color-slate-50);
   padding-top: 2rem; /* reduce top/bottom spacing */
@@ -336,9 +333,7 @@ nav {
 }
 .stat-label { font-size:.8rem; color:var(--dark-muted); margin-top:.3rem; }
 
-/* ══════════════════════════════════════════
-   SKILLS  —  slate-900 background
-══════════════════════════════════════════ */
+/*skill*/ 
 #skills { background:var(--slate-900); }
 
 .text-center { display:flex; flex-direction:column; align-items:center; }
@@ -377,18 +372,13 @@ nav {
 .skill-card i    { font-size:1.4rem; }
 .skill-card span { font-size:.68rem; font-weight:500; color:var(--light-text); }
 
-/* ══════════════════════════════════════════
-   PROJECTS  —  slate-50 background, Shravani style
-   3 cards visible, left/right arrows on sides,
-   horizontal scrollbar at bottom
-══════════════════════════════════════════ */
+/*projects*/
 #projects { background:var(--color-slate-50); padding:5rem 0; }
 
 .projects-title-area {
   text-align:center; margin-bottom:3rem; padding:0 6vw;
 }
 
-/* Side-arrow + viewport layout */
 .projects-carousel-root {
   display:flex; align-items:center; gap:0; position:relative;
 }
@@ -407,14 +397,12 @@ nav {
 .proj-arrow-left  { margin-right:14px; margin-left:6vw; }
 .proj-arrow-right { margin-left:14px;  margin-right:6vw; }
 
-/* Viewport clips the track */
 .projects-viewport {
   flex:1; overflow:hidden;
   cursor:grab; user-select:none;
 }
 .projects-viewport:active { cursor:grabbing; }
 
-/* Track slides */
 .projects-track {
   display:flex; gap:1.5rem;
   transition:transform .42s cubic-bezier(.4,0,.2,1);
@@ -422,10 +410,8 @@ nav {
 .projects-track { align-items: stretch; }
 .projects-track.dragging { transition:none; }
 
-/* Each card — exactly 1/3 of viewport width minus gaps */
 .project-card {
   flex-shrink:0;
-  /* Width = (viewport - 1 gap) / 2 */
   width:calc((100% - 1.5rem) / 2);
   background:var(--color-slate-50); border-radius:12px;
   border:1px solid var(--slate-200);
@@ -438,12 +424,11 @@ nav {
 }
 .project-card:hover { box-shadow:0 8px 32px rgba(124,110,230,.15); transform:translateY(-4px) scale(1.02); }
 
-/* Screenshot image at top */
 .project-img {
   width:100%; height:185px; object-fit:cover; display:block;
   background:var(--slate-100);
 }
-/* Placeholder when no real image */
+
 .project-img-ph {
   width:100%; height:185px;
   background:linear-gradient(135deg,#1c1c2e,#2a1a3a 50%,#1a2e28);
@@ -487,7 +472,6 @@ nav {
 }
 .plink-code:hover { color:var(--secondary); }
 
-/* Scrollbar under carousel */
 .projects-scrollbar-wrap {
   padding:1.2rem 6vw 0;
   display:flex; align-items:center; gap:.8rem;
@@ -502,7 +486,6 @@ nav {
   transition:width .3s ease;
 }
 
-/* Dot indicators below scrollbar */
 .carousel-dots {
   display:flex; gap:.5rem; justify-content:center; margin-top:1rem; padding:0 6vw;
 }
@@ -512,9 +495,7 @@ nav {
 }
 .cdot.active { background:var(--primary); width:24px; border-radius:4px; }
 
-/* ══════════════════════════════════════════
-   CONTACT  —  slate-900 background
-══════════════════════════════════════════ */
+/*contact*/
 #contact { background:var(--slate-900); }
 
 .contact-wrap { display:grid; grid-template-columns:1fr 1.25fr; gap:4rem; align-items:start; }
@@ -575,10 +556,7 @@ nav {
   font-size:.71rem; color:var(--light-muted); text-align:center;
   opacity:.65; display:flex; align-items:center; justify-content:center; gap:.35rem;
 }
-
-/* ══════════════════════════════════════════
-   FOOTER  —  slate-900 (continuation)
-══════════════════════════════════════════ */
+/*footer*/
 footer {
   background:var(--slate-800); border-top:1px solid rgba(255,255,255,.06);
   padding:2rem 6vw;
@@ -601,11 +579,8 @@ footer {
 }
 .fsocial:hover { border-color:var(--primary); color:var(--primary-light); }
 
-/* ══════════════════════════════════════════
-   RESPONSIVE
-══════════════════════════════════════════ */
+/*respon*/
 @media (max-width:1024px) {
-  /* Show 2 cards on tablet */
   .project-card { width:calc((100% - 1.5rem) / 2); }
 }
 @media (max-width:900px) {

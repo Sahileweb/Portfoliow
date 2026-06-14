@@ -76,7 +76,6 @@ export default function Hero() {
           </div>
           </div>
 
-        {/* ── Right photo ── */}
         <div className="hero-photo-side">
           {/*
             ── REMOVED floating chips (Mumbai / MERN) ──

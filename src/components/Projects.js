@@ -139,14 +139,11 @@ export default function Projects() {
 
   return (
     <section id="projects">
-      {/* Centered heading */}
       <div className="projects-title-area">
          <h2 className="s-title s-title-light reveal">My <span>Projects</span></h2>
         <p className="s-subtitle-center reveal">A selection of my work. See something you like!</p>
         <div className="s-underline reveal" />
       </div>
-
-      {/* Arrow-left  |  viewport  |  Arrow-right */}
       <div className="projects-carousel-root">
         <button
           className="proj-arrow proj-arrow-left"
@@ -171,7 +168,6 @@ export default function Projects() {
           <div className="projects-track" ref={trackRef}>
             {PROJECTS.map(p => (
               <div className="project-card" key={p.id}>
-                {/* Screenshot or placeholder */}
                 {p.img
                   ? <img src={p.img} alt={p.title} className="project-img" />
                   : (
@@ -217,7 +213,6 @@ export default function Projects() {
         </button>
       </div>
 
-      {/* Horizontal scrollbar */}
       <div className="projects-scrollbar-wrap">
         <div className="projects-scrollbar"
           onClick={(e) => {
@@ -232,8 +227,6 @@ export default function Projects() {
           />
         </div>
       </div>
-
-      {/* Dot indicators */}
       <div className="carousel-dots">
         {Array.from({ length: dots }).map((_, i) => (
           <button

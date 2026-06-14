@@ -1,23 +1,4 @@
 'use client';
-
-/**
- * ╔══════════════════════════════════════════════════════════╗
- * ║  EmailJS Setup — receive form submissions in your Gmail ║
- * ╠══════════════════════════════════════════════════════════╣
- * ║  1. Sign up free at https://www.emailjs.com             ║
- * ║  2. Add Gmail service  → copy SERVICE ID                ║
- * ║  3. Create template with:                               ║
- * ║       {{from_name}} {{from_email}} {{subject}} {{message}}║
- * ║     → copy TEMPLATE ID                                  ║
- * ║  4. Account → API Keys → copy PUBLIC KEY                ║
- * ║  5. Create .env.local in project root:                  ║
- * ║       NEXT_PUBLIC_EMAILJS_SERVICE_ID=service_xxx        ║
- * ║       NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=template_xxx      ║
- * ║       NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=xxxxxx             ║
- * ║  6. npm run dev  — done! Emails go to your Gmail.       ║
- * ╚══════════════════════════════════════════════════════════╝
- */
-
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
