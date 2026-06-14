@@ -12,8 +12,8 @@ export default function Header() {
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a
-        href="/sahil-resume.pdf"
+      <a 
+        href="RESUME (updated) sync,clause.pdf"
         className="nav-resume"
         target="_blank"
         rel="noopener noreferrer"

@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const PHRASES = [
   'Full Stack Developer & AI / ML Enthusiast',
@@ -15,8 +15,14 @@ const MARQUEE_ITEMS = [
 
 export default function Hero() {
   const typedRef = useRef(null);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
     let pi = 0, ci = 0, del = false, t;
     function tick() {
       const el = typedRef.current;
@@ -29,7 +35,7 @@ export default function Hero() {
     }
     tick();
     return () => clearTimeout(t);
-  }, []);
+  }, [isMounted]);
 
   const doubled = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
 
@@ -49,7 +55,7 @@ export default function Hero() {
           </h1>
 
           <div className="hero-typewriter">
-            <span ref={typedRef} />
+            <span ref={typedRef}>{!isMounted ? PHRASES[0] : ''}</span>
             <span className="cursor">|</span>
           </div>
 

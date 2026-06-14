@@ -58,6 +58,7 @@ export default function Skills() {
               key={t.id}
               className={`tab-btn${active === t.id ? ' active' : ''}`}
               onClick={() => setActive(t.id)}
+              suppressHydrationWarning
             >
               {t.label}
             </button>

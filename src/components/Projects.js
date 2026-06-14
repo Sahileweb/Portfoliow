@@ -48,9 +48,14 @@ const CARDS_VISIBLE = 2; // 2 on desktop for bigger cards
 
 export default function Projects() {
   const [idx, setIdx]     = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
   const trackRef          = useRef(null);
   const viewRef           = useRef(null);
   const dragData          = useRef(null);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   /* How many cards to show at this viewport width */
   const perView = useCallback(() => {
@@ -77,7 +82,9 @@ export default function Projects() {
     t.style.transform = `translateX(-${i * (cardW() + GAP)}px)`;
   }, [cardW]);
 
-  useEffect(() => { applyTransform(idx); }, [idx, applyTransform]);
+  useEffect(() => { 
+    if (isMounted) applyTransform(idx); 
+  }, [idx, applyTransform, isMounted]);
 
   useEffect(() => {
     const onResize = () => {
@@ -234,6 +241,7 @@ export default function Projects() {
             className={`cdot${i === idx ? ' active' : ''}`}
             aria-label={`Slide ${i + 1}`}
             onClick={() => setIdx(i)}
+            suppressHydrationWarning
           />
         ))}
       </div>
