@@ -13,7 +13,7 @@ export default function Header() {
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a 
-        href="RESUME (updated) sync,clause.pdf"
+        href="Resume L.pdf"
         className="nav-resume"
         target="_blank"
         rel="noopener noreferrer"
