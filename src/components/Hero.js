@@ -102,10 +102,10 @@ export default function Hero() {
                               objectFit:'cover', borderRadius:'50%' }}
                    />
              
-              {/* <div className="hero-initials-box">
+              <div className="hero-initials-box">
                 <span className="hero-initials">SM</span>
                 <span className="hero-initials-hint"></span>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
