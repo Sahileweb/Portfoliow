@@ -796,8 +796,8 @@ footer {
   
   /* 1. Squeeze the entire parent container */
   .hero-text {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
