@@ -618,3 +618,57 @@ footer {
   .proj-arrow-left  { margin-left:3vw; }
   .proj-arrow-right { margin-right:3vw; }
 }
+
+/* =========================================
+   MOBILE RESPONSIVENESS FIXES
+========================================= */
+
+/* --- 1. NAVBAR FIXES --- */
+/* For Tablets: Shrink the huge gaps so links still fit */
+@media (max-width: 950px) {
+  .nav-links { gap: 1rem; } 
+  .nav-links a { font-size: 0.8rem; }
+}
+
+/* For Phones: Hide the center links to stop them from crushing the logo */
+@media (max-width: 768px) {
+  .nav-links { 
+    display: none; 
+    /* NOTE: To make these links accessible on mobile later, 
+       you will need to build a Hamburger Menu toggle in React! */
+  } 
+}
+
+/* --- 2. HERO TEXT & BUTTON FIXES --- */
+@media (max-width: 600px) {
+  /* Shrink the typewriter font so it doesn't bleed off the screen */
+  .hero-typewriter {
+    font-size: 1.15rem; 
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* Add side padding to the paragraph so it breathes */
+  .hero-tagline {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Stack the buttons vertically so they don't squish side-by-side */
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1.5rem;
+    gap: 1rem;
+  }
+  
+  /* Make buttons full width for easier tapping */
+  .hero-btns .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
