@@ -790,40 +790,32 @@ footer {
 }
 
 /* =========================================
-   HERO MOBILE FIXES (Text & Buttons)
+   HERO MOBILE FIXES (Guaranteed Gaps)
 ========================================= */
 @media (max-width: 600px) {
   
-  /* 1. Fix Typewriter Text (Shrink font and allow wrapping if needed) */
-  .hero-typewriter {
-    font-size: 1.05rem !important; 
-    padding: 0 1rem !important; 
-    width: 100%;
-    justify-content: center;
-    white-space: normal; /* Allows text to wrap to a second line gracefully */
-    line-height: 1.4;
-  }
-
-  /* 2. Fix Paragraph (Add padding so it doesn't touch the screen edges) */
+  /* 1. Paragraph Fix: Restrict width to 85% so it leaves gaps on both sides */
   .hero-tagline {
-    padding: 0 1.5rem !important;
-    width: 100%;
-    box-sizing: border-box;
+    width: 85% !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    padding: 0 !important;
+    line-height: 1.6 !important; 
   }
 
-  /* 3. Fix Buttons (Add side padding to the wrapper so they squeeze inwards) */
+  /* 2. Button Container Fix: Restrict width to 85% */
   .hero-btns {
-    flex-direction: column;
-    width: 100%;
-    padding: 0 2rem !important; /* This is what pushes the buttons off the screen edge */
-    box-sizing: border-box;
-    gap: 1rem;
+    width: 85% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    padding: 0 !important;
   }
 
+  /* 3. Make buttons fill only that 85% space */
   .hero-btns .btn {
-    width: 100%;
-    justify-content: center;
+    width: 100% !important;
+    justify-content: center !important;
   }
 }
