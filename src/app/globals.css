@@ -788,3 +788,42 @@ footer {
     justify-content: center;
   }
 }
+
+/* =========================================
+   HERO MOBILE FIXES (Text & Buttons)
+========================================= */
+@media (max-width: 600px) {
+  
+  /* 1. Fix Typewriter Text (Shrink font and allow wrapping if needed) */
+  .hero-typewriter {
+    font-size: 1.05rem !important; 
+    padding: 0 1rem !important; 
+    width: 100%;
+    justify-content: center;
+    white-space: normal; /* Allows text to wrap to a second line gracefully */
+    line-height: 1.4;
+  }
+
+  /* 2. Fix Paragraph (Add padding so it doesn't touch the screen edges) */
+  .hero-tagline {
+    padding: 0 1.5rem !important;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 3. Fix Buttons (Add side padding to the wrapper so they squeeze inwards) */
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 2rem !important; /* This is what pushes the buttons off the screen edge */
+    box-sizing: border-box;
+    gap: 1rem;
+  }
+
+  .hero-btns .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
