@@ -584,14 +584,30 @@ footer {
   .project-card { width:calc((100% - 1.5rem) / 2); }
 }
 @media (max-width:900px) {
+  /* Stack the hero vertically and center everything */
   .hero-inner { flex-direction:column-reverse; text-align:center; padding-top:100px; padding-bottom:3rem; }
-  .hero-ring  { width:240px; height:240px; }
-  .hero-btns,.hero-stats,.hero-marquee-wrap { justify-content:center; }
-  .hero-tagline { max-width:100%; }
-  .about-grid   { grid-template-columns:1fr; }
+  
+  /* CRITICAL FIX: Remove the -100px offset from desktop so the image centers properly */
+  .hero-photo-side { transform: translateX(0); }
+  
+  /* Shrink image ring slightly for mobile */
+  .hero-ring { width:240px; height:240px; }
+  
+  /* Center the typewriter text and the marquee */
+  .hero-typewriter { justify-content: center; }
+  .hero-marquee-wrap { margin-left: auto; margin-right: auto; }
+  
+  /* Center buttons and stats */
+  .hero-btns, .hero-stats { justify-content: center; }
+  
+  /* Make sure tagline doesn't stretch weirdly */
+  .hero-tagline { max-width: 100%; margin-left: auto; margin-right: auto; }
+  
+  /* Other existing responsive fixes */
+  .about-grid { grid-template-columns:1fr; }
   .project-card { width:calc(100% - 0px); }
   .contact-wrap { grid-template-columns:1fr; }
-  .form-row     { grid-template-columns:1fr; }
+  .form-row { grid-template-columns:1fr; }
   .nav-links .hide-sm { display:none; }
 }
 @media (max-width:600px) {
