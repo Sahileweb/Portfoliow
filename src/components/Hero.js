@@ -99,7 +99,7 @@ export default function Hero() {
                      src="/images/photo.jpeg"
                      alt="Sahil Mundhe"
                      style={{ width:'100%', height:'100%',
-                              objectFit:'cover',objectPosition: 'top',, borderRadius:'50%' }}
+                              objectFit:'cover',objectPosition: 'top', borderRadius:'50%' }}
                    />
              
               {/* <div className="hero-initials-box">
