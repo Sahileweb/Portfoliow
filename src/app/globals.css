@@ -645,37 +645,107 @@ footer {
 }
 
 /* --- Mobile Navbar Styles --- */
+/* --- Hide icons on Desktop so your current look stays identical --- */
+.nav-icon {
+  display: none; 
+}
+
+/* --- Mobile Navbar UI (Matches image_c114c4.png) --- */
 @media (max-width: 768px) {
-  /* Show the hamburger icon */
   .hamburger {
     display: block;
   }
 
-  /* Transform the nav-links container into a side-menu */
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100%; /* Hide off-screen to the right */
-    width: 280px; /* Width of the mobile menu */
+    right: -100%; 
+    width: 300px; /* Wider drawer for better UI */
     height: 100vh;
-    background: var(--slate-900); /* Solid background so it's readable */
-    border-left: 1px solid rgba(255,255,255,.08);
+    background: var(--slate-900); 
+    border-left: 1px solid rgba(255,255,255,.05);
+    display: flex;
     flex-direction: column;
-    justify-content: center; /* Center links vertically */
-    gap: 2rem;
+    justify-content: flex-start; /* Align to top */
+    padding: 6rem 1.5rem 2rem; /* Room for header at top */
+    gap: 0.25rem; /* Tight gap, padding handles spacing */
     transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    box-shadow: -10px 0 40px rgba(0,0,0,0.7);
     z-index: 999;
   }
 
-  /* Class added by React when isOpen is true */
   .nav-links.active {
-    right: 0; /* Slide into view */
+    right: 0;
   }
 
-  /* Make the links larger for touch screens */
-  .nav-links a {
-    font-size: 1.2rem;
+  .nav-links li {
+    width: 100%;
+    list-style: none;
+  }
+
+  /* Show icons on mobile */
+  .nav-icon {
+    display: inline-block;
+    width: 24px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--light-muted);
+    transition: color 0.2s;
+  }
+
+  /* Style standard links */
+  .nav-links a:not(.nav-resume) {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--light-text);
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  /* Active and Hover States */
+  .nav-links a:not(.nav-resume):hover, 
+  .nav-links a:not(.nav-resume).active {
+    background: rgba(124, 110, 230, 0.15); /* Soft purple bg */
+    color: #fff;
+  }
+  
+  .nav-links a:hover .nav-icon, 
+  .nav-links a.active .nav-icon {
+    color: var(--primary-light);
+  }
+
+  /* Resume Button Specifics */
+  .nav-resume-wrapper {
+    margin-top: 1.5rem; /* Push down slightly from regular links */
+  }
+
+  .nav-links .nav-resume {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 1rem !important;
+    background: var(--primary) !important; /* Solid purple */
+    border: none !important;
+    border-radius: 12px !important;
+    color: #fff !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+  }
+  
+  .nav-links .nav-resume .nav-icon {
+    color: #fff; /* Make download icon white */
+  }
+
+  .nav-links .nav-resume:hover {
+    background: var(--primary-light) !important;
   }
 }
 

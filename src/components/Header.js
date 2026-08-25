@@ -19,11 +19,11 @@ export default function Header() {
       </div>
 
       <ul className={`nav-links ${isOpen ? "active" : ""}`}>
-        <li><a href="#home" onClick={closeMenu} >Home</a></li>
-        <li ><a href="#about" onClick={closeMenu}>About</a></li>
-        <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
-        <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
-        <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+        <li><a href="#home" className="active" onClick={closeMenu}><i className="fa-solid fa-house nav-icon"></i>Home</a></li>
+        <li><a href="#about" onClick={closeMenu}><i className="fa-regular fa-user nav-icon"></i>About</a></li>
+        <li><a href="#skills" onClick={closeMenu}><i className="fa-solid fa-code nav-icon"></i>Skills</a></li>
+        <li><a href="#projects" onClick={closeMenu}><i className="fa-solid fa-briefcase nav-icon"></i>Projects</a></li>
+        <li><a href="#contact" onClick={closeMenu}><i className="fa-regular fa-envelope nav-icon"></i>Contact</a></li>
       <li>
       <a 
         href="Resume L.pdf"
