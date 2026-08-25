@@ -1,17 +1,30 @@
 'use client';
+import { useState } from 'react';
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Toggle the menu open/closed
+  const toggleMenu = () => setIsOpen(!isOpen);
+  
+  // Close the menu when a link is clicked
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <nav>
       <a className="nav-logo" href="#home">
         Sahil
       </a>
-      <ul className="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li className="hide-sm"><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <div className="hamburger" onClick={toggleMenu}>
+        <i className={isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
+      </div>
+
+      <ul className={`nav-links ${isOpen ? "active" : ""}`}>
+        <li><a href="#home" onClick={closeMenu} >Home</a></li>
+        <li className="hide-sm" onClick={closeMenu}><a href="#about">About</a></li>
+        <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
+        <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
+        <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+      <li>
       <a 
         href="Resume L.pdf"
         className="nav-resume"
@@ -20,6 +33,8 @@ export default function Header() {
       >
         Resume
       </a>
+      </li>
+       </ul>
     </nav>
   );
 }

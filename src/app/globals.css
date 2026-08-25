@@ -630,13 +630,59 @@ footer {
   .nav-links a { font-size: 0.8rem; }
 }
 
-/* For Phones: Hide the center links to stop them from crushing the logo */
+/* --- Hamburger Icon (Hidden on Desktop) --- */
+.hamburger {
+  display: none;
+  font-size: 1.6rem;
+  color: var(--light-text);
+  cursor: pointer;
+  z-index: 1000; /* Keeps it above the menu */
+  transition: color 0.2s;
+}
+
+.hamburger:hover {
+  color: var(--primary);
+}
+
+/* --- Mobile Navbar Styles --- */
 @media (max-width: 768px) {
-  .nav-links { 
-    display: none; 
-    /* NOTE: To make these links accessible on mobile later, 
-       you will need to build a Hamburger Menu toggle in React! */
-  } 
+  /* Show the hamburger icon */
+  .hamburger {
+    display: block;
+  }
+
+  /* Transform the nav-links container into a side-menu */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hide off-screen to the right */
+    width: 280px; /* Width of the mobile menu */
+    height: 100vh;
+    background: var(--slate-900); /* Solid background so it's readable */
+    border-left: 1px solid rgba(255,255,255,.08);
+    flex-direction: column;
+    justify-content: center; /* Center links vertically */
+    gap: 2rem;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    z-index: 999;
+  }
+
+  /* Class added by React when isOpen is true */
+  .nav-links.active {
+    right: 0; /* Slide into view */
+  }
+
+  /* Make the links larger for touch screens */
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+}
+
+/* --- Tablet Navbar Tweaks (For screens just slightly too small) --- */
+@media (max-width: 950px) and (min-width: 769px) {
+  .nav-links { gap: 1.5rem; } 
+  .nav-links a { font-size: 0.85rem; }
 }
 
 /* --- 2. HERO TEXT & BUTTON FIXES --- */
