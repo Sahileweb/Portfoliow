@@ -790,32 +790,37 @@ footer {
 }
 
 /* =========================================
-   HERO MOBILE FIXES (Guaranteed Gaps)
+   BULLETPROOF HERO MOBILE FIX
 ========================================= */
 @media (max-width: 600px) {
   
-  /* 1. Paragraph Fix: Restrict width to 85% so it leaves gaps on both sides */
+  /* 1. Squeeze the entire parent container */
+  .hero-text {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. Let the paragraph flow naturally inside the squeezed container */
   .hero-tagline {
-    width: 85% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding: 0 !important;
+    width: 100% !important;
+    margin: 0 auto !important;
     line-height: 1.6 !important; 
   }
 
-  /* 2. Button Container Fix: Restrict width to 85% */
+  /* 3. Stack the buttons and make them fill the squeezed space */
   .hero-btns {
-    width: 85% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    display: flex !important;
     flex-direction: column !important;
+    width: 100% !important;
     gap: 1rem !important;
-    padding: 0 !important;
+    margin: 0 auto !important;
   }
 
-  /* 3. Make buttons fill only that 85% space */
   .hero-btns .btn {
     width: 100% !important;
+    display: flex !important;
     justify-content: center !important;
   }
 }
