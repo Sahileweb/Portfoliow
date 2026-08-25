@@ -94,20 +94,17 @@ export default function Hero() {
 
           <div className="hero-ring">
             <div className="hero-ring-inner">
-              {/*
-                ── ADD YOUR PHOTO ──
-                1. Save your photo to:  public/images/profile.jpg
-                2. Replace the div below with:
+              
                    <img
-                     src="/images/profile.jpg"
+                     src="/images/photo.jpeg"
                      alt="Sahil Mundhe"
                      style={{ width:'100%', height:'100%',
                               objectFit:'cover', borderRadius:'50%' }}
                    />
-              */}
+             
               <div className="hero-initials-box">
                 <span className="hero-initials">SM</span>
-                <span className="hero-initials-hint">add your photo</span>
+                <span className="hero-initials-hint"></span>
               </div>
             </div>
           </div>
