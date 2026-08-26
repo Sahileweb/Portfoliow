@@ -619,6 +619,13 @@ footer {
   .proj-arrow-right { margin-right:3vw; }
 }
 
+/* --- Hide Navbar Icons on Desktop & Tablet --- */
+@media (min-width: 769px) {
+  .nav-icon {
+    display: none !important;
+  }
+}
+
 /* =========================================
    MOBILE RESPONSIVENESS FIXES
 ========================================= */
