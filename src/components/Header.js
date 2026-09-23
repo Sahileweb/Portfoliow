@@ -26,7 +26,7 @@ export default function Header() {
         <li><a href="#contact" onClick={closeMenu}><i className="fa-regular fa-envelope nav-icon"></i>Contact</a></li>
       <li>
       <a 
-        href="Resume L.pdf"
+        href="resume 3 P.pdf"
         className="nav-resume"
         target="_blank"
         rel="noopener noreferrer"
