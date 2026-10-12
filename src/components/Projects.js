@@ -10,6 +10,17 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 const PROJECTS = [
   {
     id: 1,
+    img: '/projects/playmaidan.png',
+    icon: 'fa-solid fa-graduation-cap',
+    label: 'PlayMaidan',
+    title: 'PlayMaidan',
+    desc: 'A full-stack turf booking and management platform that enables customers to discover turfs, check slot availability, and book sports facilities online. Features include real-time slot management, secure authentication, Razorpay payment integration, and dedicated dashboards for turf owners to manage bookings and facilities.',
+    tags: ['Express', 'React', 'Node.js', 'PostgreSQL','Socket.IO'],
+    demo: 'https://turfly.vercel.app/',
+    code: 'https://github.com/Sahileweb/turf.git',
+  },
+  {
+    id: 2,
     img: '/projects/syncedu.png',
     icon: 'fa-solid fa-graduation-cap',
     label: 'SyncEdu',
@@ -20,7 +31,7 @@ const PROJECTS = [
     code: 'https://github.com/Sahileweb/SyncEdu',
   },
   {
-    id: 2,
+    id: 3,
     img: '/projects/clausebreaker.png',
     icon: 'fa-solid fa-robot',
     label: 'ClauseBreaker AI',
@@ -30,7 +41,7 @@ const PROJECTS = [
     code: 'https://github.com/Sahileweb/clausebreaker',
   },
   {
-    id: 3,
+    id: 4,
     img: '/projects/ecomm.png',                        // e.g. '/projects/shopsphere.png'
     icon: 'fa-solid fa-cart-shopping',
     label: 'ShopSphere',
