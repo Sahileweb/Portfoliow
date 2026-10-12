@@ -424,19 +424,14 @@ nav {
 }
 .project-card:hover { box-shadow:0 8px 32px rgba(124,110,230,.15); transform:translateY(-4px) scale(1.02); }
 
-/* .project-img {
-  width:100%; height:185px; object-fit:cover; display:block;
-  background:var(--slate-100);
-} */
-
 .project-img {
   width: 100%; 
-  height: 185px; 
-  object-fit: contain; /* Changed from cover */
+  height: auto; 
+  aspect-ratio: 1918 / 949; 
+  object-fit: cover; 
   display: block;
   background: var(--slate-100);
 }
-
 .project-img-ph {
   width:100%; height:185px;
   background:linear-gradient(135deg,#1c1c2e,#2a1a3a 50%,#1a2e28);
