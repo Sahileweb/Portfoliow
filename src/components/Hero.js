@@ -96,7 +96,7 @@ export default function Hero() {
             <div className="hero-ring-inner">
               
                    <img
-                     src="/images/photo.jpeg"
+                     src="/images/portfolioimage.png"
                      alt="Sahil Mundhe"
                      style={{ width:'100%', height:'100%',
                               objectFit:'cover',objectPosition: 'top', borderRadius:'50%' }}
